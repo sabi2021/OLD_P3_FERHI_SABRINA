@@ -3,14 +3,14 @@ body {
     color: $colour-primary;
     font-size: 2rem;
     font-weight: 100;
-    line-height: 1.7;
 }
 
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 5rem;
-    font-style: italic;
+    color: $colour-primary;
+    line-height: normal;
 }
 
 textarea {
@@ -21,7 +21,12 @@ textarea {
 
 button {
     font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-style: italic;
+    font-weight: 500;
     font-size: 2.75rem;
+}
+
+span{
+    color: $colour-text-secondary;
+    font-weight: 400;
+    line-height: normal;
 }
