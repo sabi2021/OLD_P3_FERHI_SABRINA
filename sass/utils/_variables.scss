@@ -1,11 +1,11 @@
 $colour-primary: #000;
-$colour-secondary: #030502;
+$colour-secondary: lighten($colour-primary,20);
 $colour-accent: #D6FFF5;
 $colour-white: #fff;
 $colour-text-secondary: lighten($colour-primary,40);
 $colour-rose: lighten(#ec84dc,5);
-$colour-shadow: grey;
 $colour-bg-main: rgb(250, 249, 249);
+$colour-shadow: darken($colour-bg-main, 10);
 $colour-violet: darken(#a464dc,5);
 
 $heading-shadow-size: .55rem;

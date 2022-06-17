@@ -106,7 +106,7 @@ margin-right:5px;
     margin-bottom: 25px;
     background-color: darken($colour-bg-main,1);
     border-radius: 20px;
-    box-shadow: 0 5px 8px darken($colour-bg-main, 10);
+    box-shadow: 0 5px 8px $colour-shadow;
     text-align: center;
     padding-top: 25px;
     padding-bottom: 20px;
@@ -139,3 +139,76 @@ margin-right:5px;
     margin-right: 70px;
  }
 
+.restaurant-container {
+    background-color: darken($colour-bg-main,1);
+    padding: 10px 5px;
+}
+
+.restaurants {
+    
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column;
+
+    .card{
+        background-color: $colour-white;
+        display: flex;
+        flex-direction: column; 
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5%;
+        box-shadow: 0 5px 8px $colour-shadow;
+
+        img {
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+            object-fit: scale-down;
+        }
+        
+        .description {
+            display: flex;
+            padding: 20px;
+            justify-content: space-between;
+            .texte {
+                display: flex;
+                flex-direction: column;
+            }
+            .favori {
+                font-size: 25px;
+
+                i:hover{
+                    color:$colour-rose;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $colour-secondary;
+    padding: 20px;
+    color: darken($colour-bg-main,1);
+    font-size: 20px;
+    
+    img {
+        color: $colour-white;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .fa-utensils {
+        margin-right: 6px;
+    }
+    .proposition, .partenaire {
+        font-weight: bold;
+    }
+
+    li {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .proposition {
+        margin-left: 4px;
+    }
+}
