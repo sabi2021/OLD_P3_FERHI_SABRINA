@@ -7,12 +7,15 @@
     color: $colour-white;
     margin-top: 30px;
     border-style: none;
-    box-shadow: 0 5px 10px $colour-shadow;
+    box-shadow: 0 12px 10px $colour-shadow;
     cursor: pointer;
     transform: scale(1);
     transition-property: transform;
     transition-duration: 400ms;
+    
     &:hover {
-    transform: scale()
-    }
+    transform: scale(1)
+  }
+  
 }
+    

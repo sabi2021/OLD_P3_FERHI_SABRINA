@@ -18,37 +18,148 @@
 @import "./pages/about";
 @import "./pages/project";
 
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+ul {
+    list-style: none
+}
+
+button,
+input,
+select {
+    margin: 0
+}
+
+html {
+    box-sizing: border-box
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit
+}
+
+img,
+video {
+    height: auto;
+    max-width: 100%
+}
+
+iframe {
+    border: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+td,
+th {
+    padding: 0
+}
 
 html {
     font-size: 1em;
 }
 
-header{
+#cover-spin {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+    display:block;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+#cover-spin::after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:48%;top:40%;
+    width:40px;height:40px;
+    border-style:solid;
+    border-color:black;
+    border-top-color:transparent;
+    border-width: 4px;
+    border-radius:50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+  
+header {
     text-align: center;
     font-size: medium;
 }
 
 .logo {
-        margin-top: 25px  ; /* premier numéro = haut et bas, deuxieme numero = gauche et droite*/
-        margin-bottom: 25px;
-        max-width: 130px;
-        margin-right: 20px;
-        font-family: Shrikhand;
-    }
+    margin-top: 25px;
+    /* premier numéro = haut et bas, deuxieme numero = gauche et droite*/
+    margin-bottom: 25px;
+    max-width: 130px;
+    margin-right: 20px;
+    font-family: Shrikhand;
+}
 
 
 .location {
     background-color: darken($colour-bg-main, 5);
     box-shadow: 0 5px 3px rgb(212, 208, 208) inset;
-    padding:15px;
+    padding: 15px;
 
     div {
         display: flex;
         align-items: center;
         text-align: center;
         justify-content: center;
-        font-size:14px;
+        font-size: 14px;
         margin-right: 30px;
         font-weight: bold;
         color: $colour-text-secondary;
@@ -63,32 +174,34 @@ header{
     }
 }
 
-.fas{
-margin-right:5px;
+.fas {
+    margin-right: 5px;
+
 
 }
-.welcome{
-    text-align: center;
-    background-color: darken($colour-bg-main,1);
 
-    .div{
-        padding:50px 20px;
+.welcome {
+    text-align: center;
+    background-color: darken($colour-bg-main, 1);
+
+    .div {
+        padding: 50px 20px;
         font-size: 15px;
     }
 
-    .titre{
+    .titre {
         margin-left: 50px;
     }
 
-    
+
 }
 
 
-.btn-explore{
+.btn-explore {
     @extend .btn;
 }
 
-.operation{
+.operation {
     margin: 40px 20px;
 }
 
@@ -104,15 +217,15 @@ margin-right:5px;
     align-items: center;
     font-size: 17px;
     margin-bottom: 25px;
-    background-color: darken($colour-bg-main,1);
+    background-color: darken($colour-bg-main, 1);
     border-radius: 20px;
     box-shadow: 0 5px 8px $colour-shadow;
     text-align: center;
     padding-top: 25px;
     padding-bottom: 20px;
 
-    &:hover{
-        background-color: lighten($colour-rose,20); 
+    &:hover {
+        background-color: lighten($colour-rose, 20);
 
         i {
             color: purple;
@@ -131,35 +244,35 @@ margin-right:5px;
     margin-left: -13px;
     padding: 5px;
     font-size: small;
- }
+}
 
- .list li span {
+.list li span {
     font-weight: bold;
     color: $colour-primary;
     margin-right: 70px;
- }
+}
 
 .restaurant-container {
-    background-color: darken($colour-bg-main,1);
+    background-color: darken($colour-bg-main, 1);
     padding: 10px 5px;
 }
 
 .restaurants {
-    
+
     margin: 40px 20px;
     display: flex;
     flex-direction: column;
 
-    .card{
+    .card {
         background-color: $colour-white;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         margin-top: 10px;
         margin-bottom: 10px;
         border-radius: 5%;
         box-shadow: 0 5px 8px $colour-shadow;
-        
-       
+
+
         img {
             width: 100%;
             height: 200px;
@@ -167,42 +280,64 @@ margin-right:5px;
             border-radius: 20px 20px 0px 0px;
             position: relative;
         }
-        
+
         .description {
             display: flex;
             padding: 20px;
             justify-content: space-between;
+
             .texte {
                 display: flex;
                 flex-direction: column;
             }
+
             .favori {
                 font-size: 25px;
+                overflow: hidden;
+                
+                .heartcolor {
+                    display: none;
+                }
 
-                i:hover{
-                    color:$colour-rose;
+                &:hover {
+                    
+                    .hearttransparent {
+                        display: none;
+                    }
+
+                    .heartcolor {
+                        display: block;
+                    }
                 }
             }
         }
     }
 }
 
-footer{
+footer {
     background-color: $colour-secondary;
     padding: 20px;
-    color: darken($colour-bg-main,1);
+    color: darken($colour-bg-main, 1);
     font-size: 20px;
-    
-    img {
-        color: $colour-white;
-        width: 100px;
-        margin-bottom: 10px;
+
+    .footertext {
+        margin-bottom: 15px;
+        font-weight: bolder;
+        font-family: Shrikhand;
+        text-align: left;
+        padding-left: 5px;
+        font-size: 20px;
+
+        color: white;
     }
+
 
     .fa-utensils {
         margin-right: 6px;
     }
-    .proposition, .partenaire {
+
+    .proposition,
+    .partenaire {
         font-weight: bold;
     }
 
@@ -214,4 +349,13 @@ footer{
     .proposition {
         margin-left: 4px;
     }
+
+   
+
+}
+.heartcolor {
+    background: linear-gradient($colour-rose, $colour-violet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
