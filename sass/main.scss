@@ -279,9 +279,24 @@ header {
             height: 200px;
             object-fit: cover;
             border-radius: 20px 20px 0px 0px;
-            position: relative;
         }
 
+        .img {
+
+            position: relative;
+
+            .new {
+                font-size: 15px;
+                top: 15px;
+                right: 15px;
+                position:absolute;
+                padding: 10px 20px;
+                background-color: $colour-vert;
+                border-radius: 5px;
+                color: darken($colour-vert,50);
+                font-weight: 1000;
+            }
+        }
         .description {
             display: flex;
             padding: 20px;
@@ -305,7 +320,6 @@ header {
                     .hearttransparent {
                         display: none;
                     }
-
                     .heartcolor {
                         display: block;
                     }
