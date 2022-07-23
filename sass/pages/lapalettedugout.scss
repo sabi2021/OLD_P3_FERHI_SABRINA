@@ -1,12 +1,77 @@
-.divMain{
-    background-image: url('/assets/images/restaurants/la\ palatte\ de\ goût.jpg');
-   
-}
-.menu{
-    background-color: darken($colour-bg-main, 1);
+.divHeader{
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
 
+    .leftArrow{
+        position: absolute;
+        left: 30px;
+        font-size: larger;
+    }
+
+    .logo{
+        margin:auto;
+    }
 }
-.menuecard{
-    display: flex;
-   
+
+.divMain{
+
+    
+
+    .menu {
+
+        padding:18px;
+        background-color: darken($colour-bg-main, 1);
+        .titreMenu{
+            font-family: Shrikhand;
+            font-size: 27px;
+            
+            i{
+                margin-top:5px;
+                margin-left:25px;
+            }
+        }
+
+        .cardElementMenu{
+            margin-top: 20px;
+            font-size: 20px;
+
+            .elementMenuTitre{
+                font-variant: small-caps;
+                color: lighten($colour-secondary,30);
+            }
+            .elementMenuTitre::before{
+                content: '';
+                position: absolute;
+                border-top: 2px solid $colour-vert; 
+                width: 11%;
+             }
+
+             .elementMenu{
+                 display: flex;
+                 justify-content: space-between;
+                 padding: 10px;
+                 background-color: $colour-white;
+                 border-radius: 10px;
+                 margin-top: 25px;
+
+                .platDescription {
+                    align-self: center;
+                    .titrePlat{
+                        font-weight: bold;
+                    }
+                    .accompagnementPlat{
+                        color: lighten($colour-secondary,30);
+                        font-size: 15px;
+                    }
+                }
+
+                 .platPrix{
+                     margin-top: 25px;
+                 }
+             }
+        }
+    }
 }
