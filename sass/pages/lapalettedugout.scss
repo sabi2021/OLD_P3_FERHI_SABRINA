@@ -46,16 +46,17 @@
                 content: '';
                 position: absolute;
                 border-top: 2px solid $colour-vert; 
-                width: 11%;
+                width: 3%;
              }
 
              .elementMenu{
-                 display: flex;
+                 
                  justify-content: space-between;
                  padding: 10px;
                  background-color: $colour-white;
                  border-radius: 10px;
                  margin-top: 25px;
+                 
 
                 .platDescription {
                     align-self: center;
@@ -69,9 +70,16 @@
                 }
 
                  .platPrix{
-                     margin-top: 25px;
-                 }
+                     margin-top: 50px; 
+                    
+                }
+                .validate{
+                    background-color: $colour-vert;
+                    margin-left: 200px;
+
+                }
              }
         }
     }
+    
 }
