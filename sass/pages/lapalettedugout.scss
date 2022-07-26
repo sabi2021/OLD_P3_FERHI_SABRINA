@@ -18,8 +18,6 @@
 
 .divMain{
 
-    
-
     .menu {
 
         padding:18px;
@@ -36,7 +34,7 @@
 
         .cardElementMenu{
             margin-top: 20px;
-            font-size: 20px;
+            font-size: 18px;
 
             .elementMenuTitre{
                 font-variant: small-caps;
@@ -50,9 +48,8 @@
              }
 
              .elementMenu{
-                 
+                 display: flex;
                  justify-content: space-between;
-                 padding: 10px;
                  background-color: $colour-white;
                  border-radius: 10px;
                  margin-top: 25px;
@@ -60,6 +57,7 @@
 
                 .platDescription {
                     align-self: center;
+                    margin: 10px;
                     .titrePlat{
                         font-weight: bold;
                     }
@@ -69,16 +67,33 @@
                     }
                 }
 
-                 .platPrix{
-                     margin-top: 50px; 
-                    
+                .platPrix{
+                    margin: 10px;
+                    margin-top: 35px; 
+                    font-size: 15px;
+                    font-weight: bold;
                 }
                 .validate{
-                    background-color: $colour-vert;
-                    margin-left: 200px;
-
+                    display: flex;
+                    align-items: center;
+                    background-color: lighten($colour-vert, 8);
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    width: 50px;
+                    transform-origin: 100% 50%;
+                    transition: transform 5000ms;
+                    
+                    i {
+                        color: $colour-white;
+                        margin: auto;
+                    }
+                }
+                .btn-explore{
+                    margin-right: 10px;
                 }
              }
+
+            
         }
     }
     
