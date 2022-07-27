@@ -80,16 +80,25 @@
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
                     width: 50px;
-                    transform-origin: 100% 50%;
+                    transform: 100% 50%;
                     transition: transform 5000ms;
+                
+                    
                     
                     i {
                         color: $colour-white;
                         margin: auto;
                     }
+                    i: over{
+                        transform: scale(1.1);
+                        transition:400ms
+                    }
                 }
                 .btn-explore{
                     margin-right: 10px;
+                    :active{
+                        transform: scaleX(1);
+                    }
                 }
              }
 
