@@ -15,12 +15,13 @@
     transition-duration: 400ms;
 
     &:hover {
-    transform: scale(1)
-  }
-  
-  
-  
+       transform: scale(1);
+       background:linear-gradient( lighten($colour-rose,5),lighten($colour-violet, 5) ); 
+    }
+
 }
+
+
 
 
     

@@ -48,14 +48,30 @@
              }
 
              .elementMenu{
-                 display: flex;
-                 justify-content: space-between;
-                 background-color: $colour-white;
-                 border-radius: 10px;
-                 margin-top: 25px;
-                 
+                display: flex;
+                justify-content: space-between;
+                background-color: $colour-white;
+                border-radius: 10px;
+                margin-top: 25px;
+                animation: elementMenu 2000ms;
+                animation-delay: 0ms;
+                animation-fill-mode: backwards;
+                @keyframes elementMenu {
+                    0%{
+                        transform: translateY(50%);
+                        opacity: 0;
+                    }
+                    100%{
+                        transform: translate(0%);
+                        opacity: 1;
+                    }   
+                }
 
                 .platDescription {
+                    
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 70%;
                     align-self: center;
                     margin: 10px;
                     .titrePlat{
@@ -72,6 +88,8 @@
                     margin-top: 35px; 
                     font-size: 15px;
                     font-weight: bold;
+                   
+                    
                 }
                 .validate{
                     display: flex;
@@ -80,26 +98,15 @@
                     border-top-right-radius: 10px;
                     border-bottom-right-radius: 10px;
                     width: 50px;
-                    transform: 100% 50%;
-                    transition: transform 5000ms;
-                
-                    
-                    
-                    i {
+                    transition: transform 600ms ease-in-out;
+                    & i{
                         color: $colour-white;
                         margin: auto;
+                        transition: transform 600ms ease-in-out;
                     }
-                    i: over{
-                        transform: scale(1.1);
-                        transition:400ms
-                    }
+                
                 }
-                .btn-explore{
-                    margin-right: 10px;
-                    :active{
-                        transform: scaleX(1);
-                    }
-                }
+               
              }
 
             
