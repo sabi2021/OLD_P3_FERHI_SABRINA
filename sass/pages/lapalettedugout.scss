@@ -22,13 +22,34 @@
 
         padding:18px;
         background-color: darken($colour-bg-main, 1);
+
         .titreMenu{
+
+            
             font-family: Shrikhand;
             font-size: 27px;
+            overflow: hidden;
+
+            .heartcolor {
+                display: none;
+            }
+
+            &:hover {
+                
+                .hearttransparent {
+                    display: none;
+                }
+                .heartcolor {
+                    display: block;
+                    color: $colour-violet;
+                }
+            }
+
             
             i{
                 margin-top:5px;
                 margin-left:25px;
+               
             }
         }
 
