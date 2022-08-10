@@ -89,6 +89,7 @@
                 &:hover .validate{
                     right: 0px;
                    
+                   
                 }
                 @keyframes elementMenu {
                     0%{
@@ -97,7 +98,7 @@
                     }
                     100%{
                         transform: translate(0%);
-                        opacity: 1;
+                        opacity: 2;
                     
                     }   
                 }
@@ -136,7 +137,9 @@
                     width: 20%;
                     font-size: 12px;
                     padding-top: 25px;
-                    transition: transform 600ms ease-in-out;
+                    transition: transform 1000ms ease-in-out;
+                    transform: translate(-65px);
+                    padding-left: 65px;
                     
                 }
                 .validate{
@@ -150,6 +153,13 @@
                     right: -50px;
                     
                     }
+                    .elementMenu:hover .validate  {
+                        transform: translate(-65px);
+                      }
+
+                    .elementMenu:hover .validate i {
+                        transform: rotate(360deg);
+                      }
 
                 
                 }
