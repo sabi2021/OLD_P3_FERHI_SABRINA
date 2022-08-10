@@ -151,14 +151,18 @@
                     width: 50px;
                     position: relative;
                     right: -50px;
-                    
+                    transition: transform 500ms,right 500ms,rotate 1000ms;
+                   
                     }
                     .elementMenu:hover .validate  {
-                        transform: translate(-65px);
+                        transform: right 0px ;
+                         rotate:360deg;
+                         color: red;
                       }
 
-                    .elementMenu:hover .validate i {
+                    .elementMenu:hover .fa-check-circle {
                         transform: rotate(360deg);
+                        color: red;
                       }
 
                 
